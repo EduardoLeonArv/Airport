@@ -14,9 +14,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-        <sonar.projectKey>EduardoLeonArv_Airport</sonar.projectKey>
+        <sonar.projectKey>Airport</sonar.projectKey>
         <sonar.organization>eduardoleonarv</sonar.organization>
-        <sonar.login>273b211ee12a7e8c274cc68ad85ab0e65aedc370</sonar.login>
+        <sonar.login>sqp_fb8147d67a73c9203234a747f4b90c50d6159785</sonar.login>
     </properties>
 
     <build>
