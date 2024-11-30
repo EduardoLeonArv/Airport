@@ -65,5 +65,66 @@ public class PassengerTest {
             RuntimeException exception = assertThrows(RuntimeException.class, () -> passenger.joinFlight(flight));
             assertEquals("Not enough seats for flight AA1234", exception.getMessage(), "Exception message should indicate no seats available");
         }
+
+        @Test
+        @DisplayName("Then it should allow the passenger to leave the flight by setting flight to null")
+        void testLeaveFlight() {
+            passenger.joinFlight(flight);
+            passenger.joinFlight(null);  // Leaving the flight
+            assertNull(passenger.getFlight(), "Passenger should not be assigned to any flight");
+            assertEquals(0, flight.getNumberOfPassengers(), "Flight should have no passengers after passenger leaves");
+        }
+
+        @Test
+        @DisplayName("Then it should throw an exception if the passenger cannot be removed from the previous flight")
+        void testJoinFlight_CannotRemovePassenger() {
+            Flight previousFlight = new Flight("BA1234", 2) {
+                @Override
+                public boolean removePassenger(Passenger passenger) {
+                    return false; // Simulate failure to remove passenger
+                }
+            };
+            passenger.joinFlight(previousFlight);
+            RuntimeException exception = assertThrows(RuntimeException.class, () -> passenger.joinFlight(flight));
+            assertEquals("Cannot remove passenger", exception.getMessage(), "Exception message should indicate that the passenger could not be removed from the previous flight");
+        }
+
+        @Test
+        @DisplayName("Then it should throw an exception if the passenger cannot be added to the new flight")
+        void testJoinFlight_CannotAddPassenger() {
+            Flight newFlight = new Flight("BA5678", 2) {
+                @Override
+                public boolean addPassenger(Passenger passenger) {
+                    return false; // Simulate failure to add passenger
+                }
+            };
+            RuntimeException exception = assertThrows(RuntimeException.class, () -> passenger.joinFlight(newFlight));
+            assertEquals("Cannot add passenger", exception.getMessage(), "Exception message should indicate that the passenger could not be added to the new flight");
+        }
+    }
+
+    @Nested
+    @DisplayName("Additional Passenger Method Tests")
+    class AdditionalMethodTests {
+
+        @Test
+        @DisplayName("Then the passenger's flight should be set correctly using setFlight")
+        void testSetFlight() {
+            passenger.setFlight(flight);
+            assertEquals(flight, passenger.getFlight(), "Flight should be set correctly using setFlight method");
+        }
+
+        @Test
+        @DisplayName("Then the toString method should return the correct string representation")
+        void testToString() {
+            String expected = "Passenger John Doe with identifier: ID123 from US";
+            assertEquals(expected, passenger.toString(), "toString method should return the correct representation of the passenger");
+        }
+
+        @Test
+        @DisplayName("Then it should handle null flight in joinFlight without errors")
+        void testJoinFlight_NullFlight() {
+            assertDoesNotThrow(() -> passenger.joinFlight(null), "Passenger should be able to leave a flight by passing null");
+        }
     }
 }
