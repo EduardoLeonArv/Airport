@@ -16,7 +16,6 @@
         <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <sonar.projectKey>Airport</sonar.projectKey>
         <sonar.organization>eduardoleonarv</sonar.organization>
-        <sonar.login>sqp_fb8147d67a73c9203234a747f4b90c50d6159785</sonar.login>
     </properties>
 
     <build>
