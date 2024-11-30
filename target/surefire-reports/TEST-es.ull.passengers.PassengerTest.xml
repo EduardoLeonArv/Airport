@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.ull.passengers.PassengerTest" time="0.006" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.ull.passengers.PassengerTest" time="0" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.12.7-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Usuario\AppData\Local\Temp\surefire3851887631021583551\surefirebooter9266616587245762016.jar C:\Users\Usuario\AppData\Local\Temp\surefire3851887631021583551 2024-11-30T15-17-50_719-jvmRun1 surefire17056687187270839282tmp surefire_01606228419595734645tmp"/>
+    <property name="sun.java.command" value="C:\Users\Usuario\AppData\Local\Temp\surefire2690957870013958091\surefirebooter14578734264315373750.jar C:\Users\Usuario\AppData\Local\Temp\surefire2690957870013958091 2024-11-30T15-36-31_736-jvmRun1 surefire12218872853262321224tmp surefire_05091623865497308663tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Usuario\Documents\GitHub\Airport\target\test-classes;C:\Users\Usuario\Documents\GitHub\Airport\target\classes;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\Usuario\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Usuario\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Usuario\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\Usuario\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Usuario\AppData\Local\Temp\surefire3851887631021583551\surefirebooter9266616587245762016.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Usuario\AppData\Local\Temp\surefire2690957870013958091\surefirebooter14578734264315373750.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+7"/>
@@ -60,6 +60,6 @@
   <testcase name="testJoinFlight_NoSeatsLeft" classname="es.ull.passengers.PassengerTest$JoinFlightTests" time="0"/>
   <testcase name="testJoinFlight_ChangeFlight" classname="es.ull.passengers.PassengerTest$JoinFlightTests" time="0"/>
   <testcase name="testJoinFlight_Success" classname="es.ull.passengers.PassengerTest$JoinFlightTests" time="0"/>
-  <testcase name="testPassengerConstructor_ValidCountryCode" classname="es.ull.passengers.PassengerTest$PassengerCreationTests" time="0.003"/>
+  <testcase name="testPassengerConstructor_ValidCountryCode" classname="es.ull.passengers.PassengerTest$PassengerCreationTests" time="0"/>
   <testcase name="testPassengerConstructor_InvalidCountryCode" classname="es.ull.passengers.PassengerTest$PassengerCreationTests" time="0"/>
 </testsuite>
