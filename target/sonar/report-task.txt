@@ -1,7 +1,0 @@
-organization=eduardoleonarv
-projectKey=EduardoLeonArv_Airport
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.58190
-dashboardUrl=https://sonarcloud.io/dashboard?id=EduardoLeonArv_Airport
-ceTaskId=AZN-D-M1I-g9RnxF2qLh
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZN-D-M1I-g9RnxF2qLh

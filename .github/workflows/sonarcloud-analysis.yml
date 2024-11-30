@@ -1,9 +1,9 @@
-name: SonarCloud Analysis
+name: SonarCloud Analysis with Coverage
 
 on:
   push:
     branches:
-      - main  # Puedes especificar la rama que quieres analizar automáticamente
+      - main  # Cambia "main" por la rama que desees analizar automáticamente
   pull_request:
     branches:
       - main
@@ -30,7 +30,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
 
-    - name: Build with Maven and Run Tests
+    - name: Build and Test with Coverage
       run: mvn clean verify -Pcoverage
 
     - name: SonarCloud Scan
