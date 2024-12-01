@@ -1,0 +1,44 @@
+# Doxyfile Configuration for Java Project Documentation
+
+# Project settings
+PROJECT_NAME           = "Airport Java Project"
+PROJECT_NUMBER         = "1.0"
+OUTPUT_DIRECTORY       = "target/site/doxygen"
+
+# Build settings
+OPTIMIZE_OUTPUT_JAVA   = YES
+JAVADOC_AUTOBRIEF      = YES
+INPUT                  = "src/main/java"
+FILE_PATTERNS          = *.java
+RECURSIVE              = YES
+
+# Documentation settings
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = YES
+GENERATE_MAN           = YES
+GENERATE_XML           = YES
+
+# Source code settings
+INLINE_SOURCES         = YES
+SOURCE_BROWSER         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# Graph generation (for class diagrams)
+HAVE_DOT               = YES          # Enables Graphviz
+DOT_PATH               =              # Path to Graphviz if not in system PATH
+CLASS_DIAGRAMS         = YES          # Generate diagrams for class inheritance
+UML_LOOK               = YES          # Use UML style for diagrams
+CALL_GRAPH             = YES          # Generate call graphs for functions
+CALLER_GRAPH           = YES          # Generate caller graphs for functions
+DOT_GRAPH_MAX_NODES    = 50           # Limit nodes per graph for readability
+MAX_DOT_GRAPH_DEPTH    = 0            # Depth for call graphs; 0 means unlimited
+DOT_IMAGE_FORMAT       = png          # Image format for the generated diagrams
+
+# Warnings
+WARN_IF_UNDOCUMENTED   = YES
+WARNINGS               = YES
+
+# Output language
+OUTPUT_LANGUAGE        = English

@@ -1,0 +1,261 @@
+.TH "es.ull.passengers.Passenger" 3 "Version 1.0" "Airport Java Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+es.ull.passengers.Passenger \- Clase que representa a un pasajero\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPassenger\fP (String identifier, String name, String countryCode)"
+.br
+.RI "Constructor de la clase \fBPassenger\fP\&. "
+.ti -1c
+.RI "String \fBgetIdentifier\fP ()"
+.br
+.RI "Obtiene el identificador del pasajero\&. "
+.ti -1c
+.RI "String \fBgetName\fP ()"
+.br
+.RI "Obtiene el nombre del pasajero\&. "
+.ti -1c
+.RI "String \fBgetCountryCode\fP ()"
+.br
+.RI "Obtiene el código de país del pasajero\&. "
+.ti -1c
+.RI "\fBFlight\fP \fBgetFlight\fP ()"
+.br
+.RI "Obtiene el vuelo al que está asociado el pasajero\&. "
+.ti -1c
+.RI "void \fBjoinFlight\fP (\fBFlight\fP flight)"
+.br
+.RI "Asigna un pasajero a un vuelo\&. "
+.ti -1c
+.RI "void \fBsetFlight\fP (\fBFlight\fP flight)"
+.br
+.RI "Asigna un vuelo al pasajero\&. "
+.ti -1c
+.RI "String \fBtoString\fP ()"
+.br
+.RI "Representación en cadena de la información del pasajero\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Clase que representa a un pasajero\&. 
+.PP
+Definition at line \fB10\fP of file \fBPassenger\&.java\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "es\&.ull\&.passengers\&.Passenger\&.Passenger (String identifier, String name, String countryCode)"
+
+.PP
+Constructor de la clase \fBPassenger\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidentifier\fP Identificador único del pasajero\&. 
+.br
+\fIname\fP Nombre del pasajero\&. 
+.br
+\fIcountryCode\fP Código del país del pasajero (en formato ISO)\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIRuntimeException\fP Si el código de país no es válido\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB25\fP of file \fBPassenger\&.java\fP\&.
+.nf
+25                                                                          {
+26         if (!Arrays\&.asList(Locale\&.getISOCountries())\&.contains(countryCode)) {
+27             throw new RuntimeException("Invalid country code");
+28         }
+29 
+30         this\&.identifier = identifier;
+31         this\&.name = name;
+32         this\&.countryCode = countryCode;
+33     }
+.PP
+.fi
+
+.SH "Member Function Documentation"
+.PP 
+.SS "String es\&.ull\&.passengers\&.Passenger\&.getCountryCode ()"
+
+.PP
+Obtiene el código de país del pasajero\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Código del país del pasajero\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB58\fP of file \fBPassenger\&.java\fP\&.
+.nf
+58                                    {
+59         return countryCode;
+60     }
+.PP
+.fi
+
+.PP
+Referenced by \fBes\&.ull\&.passengers\&.Passenger\&.toString()\fP\&.
+.SS "\fBFlight\fP es\&.ull\&.passengers\&.Passenger\&.getFlight ()"
+
+.PP
+Obtiene el vuelo al que está asociado el pasajero\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Vuelo asociado al pasajero\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB67\fP of file \fBPassenger\&.java\fP\&.
+.nf
+67                               {
+68         return flight;
+69     }
+.PP
+.fi
+
+.SS "String es\&.ull\&.passengers\&.Passenger\&.getIdentifier ()"
+
+.PP
+Obtiene el identificador del pasajero\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Identificador del pasajero\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB40\fP of file \fBPassenger\&.java\fP\&.
+.nf
+40                                   {
+41         return identifier;
+42     }
+.PP
+.fi
+
+.PP
+Referenced by \fBes\&.ull\&.passengers\&.Passenger\&.toString()\fP\&.
+.SS "String es\&.ull\&.passengers\&.Passenger\&.getName ()"
+
+.PP
+Obtiene el nombre del pasajero\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Nombre del pasajero\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB49\fP of file \fBPassenger\&.java\fP\&.
+.nf
+49                             {
+50         return name;
+51     }
+.PP
+.fi
+
+.PP
+Referenced by \fBes\&.ull\&.passengers\&.Passenger\&.toString()\fP\&.
+.SS "void es\&.ull\&.passengers\&.Passenger\&.joinFlight (\fBFlight\fP flight)"
+
+.PP
+Asigna un pasajero a un vuelo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIflight\fP Vuelo al que el pasajero se unirá\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIRuntimeException\fP Si no se puede eliminar o añadir el pasajero del/ al vuelo\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB77\fP of file \fBPassenger\&.java\fP\&.
+.nf
+77                                           {
+78         Flight previousFlight = this\&.flight;
+79         if (null != previousFlight) {
+80             if (!previousFlight\&.removePassenger(this)) {
+81                 throw new RuntimeException("Cannot remove passenger");
+82             }
+83         }
+84         setFlight(flight);
+85         if (null != flight) {
+86             if (!flight\&.addPassenger(this)) {
+87                 throw new RuntimeException("Cannot add passenger");
+88             }
+89         }
+90     }
+.PP
+.fi
+
+.PP
+References \fBes\&.ull\&.flights\&.Flight\&.addPassenger()\fP, \fBes\&.ull\&.flights\&.Flight\&.removePassenger()\fP, and \fBes\&.ull\&.passengers\&.Passenger\&.setFlight()\fP\&.
+.SS "void es\&.ull\&.passengers\&.Passenger\&.setFlight (\fBFlight\fP flight)"
+
+.PP
+Asigna un vuelo al pasajero\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIflight\fP Vuelo a asignar al pasajero\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB97\fP of file \fBPassenger\&.java\fP\&.
+.nf
+97                                          {
+98         this\&.flight = flight;
+99     }
+.PP
+.fi
+
+.PP
+Referenced by \fBes\&.ull\&.flights\&.Flight\&.addPassenger()\fP, \fBes\&.ull\&.passengers\&.Passenger\&.joinFlight()\fP, and \fBes\&.ull\&.flights\&.Flight\&.removePassenger()\fP\&.
+.SS "String es\&.ull\&.passengers\&.Passenger\&.toString ()"
+
+.PP
+Representación en cadena de la información del pasajero\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Información del pasajero en formato de cadena\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB107\fP of file \fBPassenger\&.java\fP\&.
+.nf
+107                              {
+108         return "Passenger " + getName() + " with identifier: " + getIdentifier() + " from " + getCountryCode();
+109     }
+.PP
+.fi
+
+.PP
+References \fBes\&.ull\&.passengers\&.Passenger\&.getCountryCode()\fP, \fBes\&.ull\&.passengers\&.Passenger\&.getIdentifier()\fP, and \fBes\&.ull\&.passengers\&.Passenger\&.getName()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Airport Java Project from the source code\&.
