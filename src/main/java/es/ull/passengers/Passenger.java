@@ -1,25 +1,29 @@
+/**
+ * @file Passenger.java
+ * @brief Clase que representa un pasajero.
+ *
+ * Esta clase gestiona la información de un pasajero, incluyendo su identificador único, nombre, país de origen, y vuelo asociado.
+ */
+
 package es.ull.passengers;
 
 import java.util.Arrays;
 import java.util.Locale;
 import es.ull.flights.Flight;
 
-/**
- * Clase que representa a un pasajero.
- */
 public class Passenger {
 
-    private String identifier;   // Identificador único del pasajero
-    private String name;         // Nombre del pasajero
-    private String countryCode;  // Código del país del pasajero (en formato ISO)
-    private Flight flight;       // Vuelo asociado al pasajero
+    private String identifier;   ///< Identificador único del pasajero.
+    private String name;         ///< Nombre completo del pasajero.
+    private String countryCode;  ///< Código del país del pasajero en formato ISO.
+    private Flight flight;       ///< Vuelo asignado al pasajero.
 
     /**
-     * Constructor de la clase Passenger.
+     * @brief Constructor de la clase Passenger.
      *
      * @param identifier Identificador único del pasajero.
-     * @param name Nombre del pasajero.
-     * @param countryCode Código del país del pasajero (en formato ISO).
+     * @param name Nombre completo del pasajero.
+     * @param countryCode Código del país en formato ISO.
      * @throws RuntimeException Si el código de país no es válido.
      */
     public Passenger(String identifier, String name, String countryCode) {
@@ -33,7 +37,7 @@ public class Passenger {
     }
 
     /**
-     * Obtiene el identificador del pasajero.
+     * @brief Obtiene el identificador del pasajero.
      *
      * @return Identificador del pasajero.
      */
@@ -42,37 +46,37 @@ public class Passenger {
     }
 
     /**
-     * Obtiene el nombre del pasajero.
+     * @brief Obtiene el nombre del pasajero.
      *
-     * @return Nombre del pasajero.
+     * @return Nombre completo del pasajero.
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Obtiene el código de país del pasajero.
+     * @brief Obtiene el código de país del pasajero.
      *
-     * @return Código del país del pasajero.
+     * @return Código de país en formato ISO.
      */
     public String getCountryCode() {
         return countryCode;
     }
 
     /**
-     * Obtiene el vuelo al que está asociado el pasajero.
+     * @brief Obtiene el vuelo asignado al pasajero.
      *
-     * @return Vuelo asociado al pasajero.
+     * @return Vuelo asignado al pasajero o null si no tiene vuelo asignado.
      */
     public Flight getFlight() {
         return flight;
     }
 
     /**
-     * Asigna un pasajero a un vuelo.
+     * @brief Asocia un pasajero a un vuelo.
      *
-     * @param flight Vuelo al que el pasajero se unirá.
-     * @throws RuntimeException Si no se puede eliminar o añadir el pasajero del/ al vuelo.
+     * @param flight Vuelo al que el pasajero será asignado.
+     * @throws RuntimeException Si no es posible asignar o remover el pasajero.
      */
     public void joinFlight(Flight flight) {
         Flight previousFlight = this.flight;
@@ -90,18 +94,18 @@ public class Passenger {
     }
 
     /**
-     * Asigna un vuelo al pasajero.
+     * @brief Asigna un vuelo al pasajero.
      *
-     * @param flight Vuelo a asignar al pasajero.
+     * @param flight Vuelo a asignar.
      */
     public void setFlight(Flight flight) {
         this.flight = flight;
     }
 
     /**
-     * Representación en cadena de la información del pasajero.
+     * @brief Representación en cadena del pasajero.
      *
-     * @return Información del pasajero en formato de cadena.
+     * @return Información del pasajero en formato legible.
      */
     @Override
     public String toString() {

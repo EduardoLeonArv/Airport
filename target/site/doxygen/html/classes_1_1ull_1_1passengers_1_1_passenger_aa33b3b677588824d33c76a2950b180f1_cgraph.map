@@ -1,9 +1,0 @@
-<map id="es.ull.passengers.Passenger.toString" name="es.ull.passengers.Passenger.toString">
-<area shape="rect" id="Node000001" title="Representación en cadena de la información del pasajero." alt="" coords="5,69,211,109"/>
-<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1passengers_1_1_passenger.html#a0b10b5172260428e96e7238421568520" title="Obtiene el código de país del pasajero." alt="" coords="276,5,488,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,66,278,47,279,52,197,71"/>
-<area shape="rect" id="Node000003" href="$classes_1_1ull_1_1passengers_1_1_passenger.html#a2477c2f0b9a49a9d9b47396ef0a8d231" title="Obtiene el identificador del pasajero." alt="" coords="276,69,488,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,87,261,87,261,92,211,92"/>
-<area shape="rect" id="Node000004" href="$classes_1_1ull_1_1passengers_1_1_passenger.html#a30bde0502748dd7880d0cec945be22c7" title="Obtiene el nombre del pasajero." alt="" coords="259,134,505,159"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="206,107,259,119,302,128,301,133,258,124,205,113"/>
-</map>

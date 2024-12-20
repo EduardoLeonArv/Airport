@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"es.ull.flights"},{"l":"es.ull.passengers"}];updateSearchResults();
