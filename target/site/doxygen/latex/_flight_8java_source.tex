@@ -1,0 +1,56 @@
+\doxysection{Flight.\+java}
+\hypertarget{_flight_8java_source}{}\label{_flight_8java_source}\index{src/main/java/es/ull/flights/Flight.java@{src/main/java/es/ull/flights/Flight.java}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00001}00001\ \textcolor{keyword}{package\ }es.ull.flights;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.HashSet;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.Set;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.regex.Matcher;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.util.regex.Pattern;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00007}00007\ \textcolor{keyword}{import}\ es.ull.passengers.Passenger;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00012}\mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight}{Flight}}\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{private}\ String\ flightNumber;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ seats;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ Set<Passenger>\ passengers\ =\ \textcolor{keyword}{new}\ HashSet<>();}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ String\ flightNumberRegex\ =\ \textcolor{stringliteral}{"{}\string^[A-\/Z]\{2\}\(\backslash\)\(\backslash\)d\{3,4\}\$"{}};}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ Pattern\ pattern\ =\ Pattern.compile(flightNumberRegex);}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00036}\mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_aa5ad30bdd0beaab1b4eee82226e14149}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_aa5ad30bdd0beaab1b4eee82226e14149}{Flight}}(String\ flightNumber,\ \textcolor{keywordtype}{int}\ seats)\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ Matcher\ matcher\ =\ pattern.matcher(flightNumber);}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!matcher.matches())\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ RuntimeException(\textcolor{stringliteral}{"{}Invalid\ flight\ number"{}});}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ this.flightNumber\ =\ flightNumber;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ this.seats\ =\ seats;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00050}\mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_a54acb8002451233c0627f67d7da6cdff}{00050}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_a54acb8002451233c0627f67d7da6cdff}{getFlightNumber}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ flightNumber;}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00059}\mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_a187a56be3a80aeed3f86f5af788cefe4}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_a187a56be3a80aeed3f86f5af788cefe4}{getNumberOfPassengers}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ passengers.size();}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00070}\mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_af91e68d0b5783e3593f4dac614e8f6df}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_af91e68d0b5783e3593f4dac614e8f6df}{addPassenger}}(\mbox{\hyperlink{classes_1_1ull_1_1passengers_1_1_passenger}{Passenger}}\ passenger)\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_a187a56be3a80aeed3f86f5af788cefe4}{getNumberOfPassengers}}()\ >=\ seats)\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ RuntimeException(\textcolor{stringliteral}{"{}Not\ enough\ seats\ for\ flight\ "{}}\ +\ \mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_a54acb8002451233c0627f67d7da6cdff}{getFlightNumber}}());}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ passenger.\mbox{\hyperlink{classes_1_1ull_1_1passengers_1_1_passenger_a304d20a6a14fc06b986745b345720cde}{setFlight}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ passengers.add(passenger);}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00084}\mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_aae162ee591aaab6ea905e8eb116b0b5a}{00084}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classes_1_1ull_1_1flights_1_1_flight_aae162ee591aaab6ea905e8eb116b0b5a}{removePassenger}}(\mbox{\hyperlink{classes_1_1ull_1_1passengers_1_1_passenger}{Passenger}}\ passenger)\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ passenger.\mbox{\hyperlink{classes_1_1ull_1_1passengers_1_1_passenger_a304d20a6a14fc06b986745b345720cde}{setFlight}}(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ passengers.remove(passenger);}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_8java_source_l00088}00088\ \}}
+
+\end{DoxyCode}

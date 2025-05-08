@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.48.0" timestamp="2024-12-20T13:04:41.658">
+<file name="C:\Users\Usuario\Documents\GitHub\Airport\src\main\java\es\ull\passengers\Passenger.java">
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="24" rule="UnnecessaryImport" ruleset="Code Style" package="es.ull.passengers" class="Passenger" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.Arrays'
+</violation>
+<violation beginline="11" endline="11" begincolumn="1" endcolumn="24" rule="UnnecessaryImport" ruleset="Code Style" package="es.ull.passengers" class="Passenger" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.Locale'
+</violation>
+</file>
+</pmd>

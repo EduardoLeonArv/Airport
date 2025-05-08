@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="9.3">
-<file name="C:\Users\Usuario\Documents\GitHub\Airport\src\main\java\es\ull\flights\Flight.java">
-<error line="24" severity="warning" message="La línea es mayor de 120 caracteres (encontrado 126)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="25" severity="warning" message="La línea es mayor de 120 caracteres (encontrado 128)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-</file>
 <file name="C:\Users\Usuario\Documents\GitHub\Airport\src\main\java\es\ull\passengers\Passenger.java">
-<error line="5" severity="warning" message="La línea es mayor de 120 caracteres (encontrado 130)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="5" severity="warning" message="Line is longer than 120 characters (found 130)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="16" severity="warning" message="Line is longer than 120 characters (found 129)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
 </checkstyle>

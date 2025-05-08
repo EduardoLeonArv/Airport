@@ -1,0 +1,5 @@
+<map id="es.ull.flights.Flight.getNumberOfPassengers" name="es.ull.flights.Flight.getNumberOfPassengers">
+<area shape="rect" id="Node000001" title="Obtiene el número de pasajeros actualmente en el vuelo." alt="" coords="205,5,355,45"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1flights_1_1_flight.html#af91e68d0b5783e3593f4dac614e8f6df" title="Añade un pasajero al vuelo." alt="" coords="5,5,157,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,28,158,28,158,23,190,23"/>
+</map>

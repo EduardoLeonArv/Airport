@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="classes_1_1ull_1_1flights_1_1_flight" kind="class" language="Java" prot="public">
+    <compoundname>es::ull::flights::Flight</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1flights_1_1_flight_1aee158270ca34ef7f0a8142e4b54d3685" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String es.ull.flights.Flight.flightNumber</definition>
+        <argsstring></argsstring>
+        <name>flightNumber</name>
+        <qualifiedname>es.ull.flights.Flight.flightNumber</qualifiedname>
+        <briefdescription>
+<para>Número de vuelo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="15" column="20" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1flights_1_1_flight_1aa47038dc8f3fc4b542ea1385f047845f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int es.ull.flights.Flight.seats</definition>
+        <argsstring></argsstring>
+        <name>seats</name>
+        <qualifiedname>es.ull.flights.Flight.seats</qualifiedname>
+        <briefdescription>
+<para>Número de asientos disponibles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="18" column="17" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1flights_1_1_flight_1aa40853bdec074ab4987325a3ed92bfe4" prot="private" static="no" mutable="no">
+        <type>Set&lt; <ref refid="classes_1_1ull_1_1passengers_1_1_passenger" kindref="compound">Passenger</ref> &gt;</type>
+        <definition>Set&lt;Passenger&gt; es.ull.flights.Flight.passengers</definition>
+        <argsstring></argsstring>
+        <name>passengers</name>
+        <qualifiedname>es.ull.flights.Flight.passengers</qualifiedname>
+        <initializer>= new HashSet&lt;&gt;()</initializer>
+        <briefdescription>
+<para>Conjunto de pasajeros del vuelo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="21" column="17" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classes_1_1ull_1_1flights_1_1_flight_1a746a161c2e98f637e5c9ab6f610ce161" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String es.ull.flights.Flight.flightNumberRegex</definition>
+        <argsstring></argsstring>
+        <name>flightNumberRegex</name>
+        <qualifiedname>es.ull.flights.Flight.flightNumberRegex</qualifiedname>
+        <initializer>= &quot;^[A-Z]{2}\\d{3,4}$&quot;</initializer>
+        <briefdescription>
+<para>Expresión regular para validar el número de vuelo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="24" column="27" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classes_1_1ull_1_1flights_1_1_flight_1a2a0608f3d3d8b0a65f13cd6c3f28b241" prot="private" static="yes" mutable="no">
+        <type>Pattern</type>
+        <definition>Pattern es.ull.flights.Flight.pattern</definition>
+        <argsstring></argsstring>
+        <name>pattern</name>
+        <qualifiedname>es.ull.flights.Flight.pattern</qualifiedname>
+        <initializer>= Pattern.compile(flightNumberRegex)</initializer>
+        <briefdescription>
+<para>Patrón compilado para validar números de vuelo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="27" column="28" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classes_1_1ull_1_1flights_1_1_flight_1aa5ad30bdd0beaab1b4eee82226e14149" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>es.ull.flights.Flight.Flight</definition>
+        <argsstring>(String flightNumber, int seats)</argsstring>
+        <name>Flight</name>
+        <qualifiedname>es.ull.flights.Flight.Flight</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>flightNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seats</declname>
+        </param>
+        <briefdescription>
+<para>Constructor de la clase <ref refid="classes_1_1ull_1_1flights_1_1_flight" kindref="compound">Flight</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flightNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número del vuelo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seats</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número de asientos disponibles. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>RuntimeException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Si el número del vuelo no es válido. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="36" column="12" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="36" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1flights_1_1_flight_1a54acb8002451233c0627f67d7da6cdff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String es.ull.flights.Flight.getFlightNumber</definition>
+        <argsstring>()</argsstring>
+        <name>getFlightNumber</name>
+        <qualifiedname>es.ull.flights.Flight.getFlightNumber</qualifiedname>
+        <briefdescription>
+<para>Obtiene el número del vuelo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>El número del vuelo. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="50" column="19" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="50" bodyend="52"/>
+        <referencedby refid="classes_1_1ull_1_1flights_1_1_flight_1af91e68d0b5783e3593f4dac614e8f6df" compoundref="_flight_8java" startline="70" endline="76">es.ull.flights.Flight.addPassenger</referencedby>
+        <referencedby refid="classes_1_1ull_1_1passengers_1_1_passenger_1aa33b3b677588824d33c76a2950b180f1" compoundref="_passenger_8java" startline="97" endline="104">es.ull.passengers.Passenger.toString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1flights_1_1_flight_1a187a56be3a80aeed3f86f5af788cefe4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int es.ull.flights.Flight.getNumberOfPassengers</definition>
+        <argsstring>()</argsstring>
+        <name>getNumberOfPassengers</name>
+        <qualifiedname>es.ull.flights.Flight.getNumberOfPassengers</qualifiedname>
+        <briefdescription>
+<para>Obtiene el número de pasajeros actualmente en el vuelo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>El número de pasajeros. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="59" column="16" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="59" bodyend="61"/>
+        <referencedby refid="classes_1_1ull_1_1flights_1_1_flight_1af91e68d0b5783e3593f4dac614e8f6df" compoundref="_flight_8java" startline="70" endline="76">es.ull.flights.Flight.addPassenger</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1flights_1_1_flight_1af91e68d0b5783e3593f4dac614e8f6df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean es.ull.flights.Flight.addPassenger</definition>
+        <argsstring>(Passenger passenger)</argsstring>
+        <name>addPassenger</name>
+        <qualifiedname>es.ull.flights.Flight.addPassenger</qualifiedname>
+        <param>
+          <type><ref refid="classes_1_1ull_1_1passengers_1_1_passenger" kindref="compound">Passenger</ref></type>
+          <declname>passenger</declname>
+        </param>
+        <briefdescription>
+<para>Añade un pasajero al vuelo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>passenger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objeto Passenger que representa al pasajero a añadir. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True si el pasajero fue añadido exitosamente. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>RuntimeException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Si no hay asientos disponibles. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="70" column="20" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="70" bodyend="76"/>
+        <references refid="classes_1_1ull_1_1flights_1_1_flight_1a54acb8002451233c0627f67d7da6cdff" compoundref="_flight_8java" startline="50" endline="52">es.ull.flights.Flight.getFlightNumber</references>
+        <references refid="classes_1_1ull_1_1flights_1_1_flight_1a187a56be3a80aeed3f86f5af788cefe4" compoundref="_flight_8java" startline="59" endline="61">es.ull.flights.Flight.getNumberOfPassengers</references>
+        <references refid="classes_1_1ull_1_1passengers_1_1_passenger_1a304d20a6a14fc06b986745b345720cde" compoundref="_passenger_8java" startline="78" endline="80">es.ull.passengers.Passenger.setFlight</references>
+      </memberdef>
+      <memberdef kind="function" id="classes_1_1ull_1_1flights_1_1_flight_1aae162ee591aaab6ea905e8eb116b0b5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean es.ull.flights.Flight.removePassenger</definition>
+        <argsstring>(Passenger passenger)</argsstring>
+        <name>removePassenger</name>
+        <qualifiedname>es.ull.flights.Flight.removePassenger</qualifiedname>
+        <param>
+          <type><ref refid="classes_1_1ull_1_1passengers_1_1_passenger" kindref="compound">Passenger</ref></type>
+          <declname>passenger</declname>
+        </param>
+        <briefdescription>
+<para>Elimina un pasajero del vuelo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>passenger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objeto Passenger que representa al pasajero a eliminar. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True si el pasajero fue eliminado exitosamente. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/es/ull/flights/Flight.java" line="84" column="20" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="84" bodyend="87"/>
+        <references refid="classes_1_1ull_1_1passengers_1_1_passenger_1a304d20a6a14fc06b986745b345720cde" compoundref="_passenger_8java" startline="78" endline="80">es.ull.passengers.Passenger.setFlight</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Clase que representa un vuelo, gestionando los pasajeros y asientos disponibles. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>es.ull.flights.Flight</label>
+        <link refid="classes_1_1ull_1_1flights_1_1_flight"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/es/ull/flights/Flight.java" line="12" column="7" bodyfile="src/main/java/es/ull/flights/Flight.java" bodystart="12" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1af91e68d0b5783e3593f4dac614e8f6df" prot="public" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>addPassenger</name></member>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1aa5ad30bdd0beaab1b4eee82226e14149" prot="public" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>Flight</name></member>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1aee158270ca34ef7f0a8142e4b54d3685" prot="private" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>flightNumber</name></member>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1a746a161c2e98f637e5c9ab6f610ce161" prot="private" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>flightNumberRegex</name></member>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1a54acb8002451233c0627f67d7da6cdff" prot="public" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>getFlightNumber</name></member>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1a187a56be3a80aeed3f86f5af788cefe4" prot="public" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>getNumberOfPassengers</name></member>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1aa40853bdec074ab4987325a3ed92bfe4" prot="private" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>passengers</name></member>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1a2a0608f3d3d8b0a65f13cd6c3f28b241" prot="private" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>pattern</name></member>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1aae162ee591aaab6ea905e8eb116b0b5a" prot="public" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>removePassenger</name></member>
+      <member refid="classes_1_1ull_1_1flights_1_1_flight_1aa47038dc8f3fc4b542ea1385f047845f" prot="private" virt="non-virtual"><scope>es::ull::flights::Flight</scope><name>seats</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

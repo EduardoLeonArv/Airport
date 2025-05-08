@@ -1,0 +1,186 @@
+.TH "es.ull.flights.Flight" 3 "Version 1.0" "Airport Java Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+es.ull.flights.Flight \- Clase que representa un vuelo, gestionando los pasajeros y asientos disponibles\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFlight\fP (String flightNumber, int seats)"
+.br
+.RI "Constructor de la clase \fBFlight\fP\&. "
+.ti -1c
+.RI "String \fBgetFlightNumber\fP ()"
+.br
+.RI "Obtiene el número del vuelo\&. "
+.ti -1c
+.RI "int \fBgetNumberOfPassengers\fP ()"
+.br
+.RI "Obtiene el número de pasajeros actualmente en el vuelo\&. "
+.ti -1c
+.RI "boolean \fBaddPassenger\fP (\fBPassenger\fP passenger)"
+.br
+.RI "Añade un pasajero al vuelo\&. "
+.ti -1c
+.RI "boolean \fBremovePassenger\fP (\fBPassenger\fP passenger)"
+.br
+.RI "Elimina un pasajero del vuelo\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Clase que representa un vuelo, gestionando los pasajeros y asientos disponibles\&. 
+.PP
+Definition at line \fB12\fP of file \fBFlight\&.java\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "es\&.ull\&.flights\&.Flight\&.Flight (String flightNumber, int seats)"
+
+.PP
+Constructor de la clase \fBFlight\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIflightNumber\fP Número del vuelo\&. 
+.br
+\fIseats\fP Número de asientos disponibles\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIRuntimeException\fP Si el número del vuelo no es válido\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB36\fP of file \fBFlight\&.java\fP\&.
+.nf
+36                                                   {
+37         Matcher matcher = pattern\&.matcher(flightNumber);
+38         if (!matcher\&.matches()) {
+39             throw new RuntimeException("Invalid flight number");
+40         }
+41         this\&.flightNumber = flightNumber;
+42         this\&.seats = seats;
+43     }
+.PP
+.fi
+
+.SH "Member Function Documentation"
+.PP 
+.SS "boolean es\&.ull\&.flights\&.Flight\&.addPassenger (\fBPassenger\fP passenger)"
+
+.PP
+Añade un pasajero al vuelo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpassenger\fP Objeto Passenger que representa al pasajero a añadir\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True si el pasajero fue añadido exitosamente\&. 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIRuntimeException\fP Si no hay asientos disponibles\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB70\fP of file \fBFlight\&.java\fP\&.
+.nf
+70                                                      {
+71         if (getNumberOfPassengers() >= seats) {
+72             throw new RuntimeException("Not enough seats for flight " + getFlightNumber());
+73         }
+74         passenger\&.setFlight(this);
+75         return passengers\&.add(passenger);
+76     }
+.PP
+.fi
+
+.PP
+References \fBes\&.ull\&.flights\&.Flight\&.getFlightNumber()\fP, \fBes\&.ull\&.flights\&.Flight\&.getNumberOfPassengers()\fP, and \fBes\&.ull\&.passengers\&.Passenger\&.setFlight()\fP\&.
+.SS "String es\&.ull\&.flights\&.Flight\&.getFlightNumber ()"
+
+.PP
+Obtiene el número del vuelo\&. 
+.PP
+\fBReturns\fP
+.RS 4
+El número del vuelo\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB50\fP of file \fBFlight\&.java\fP\&.
+.nf
+50                                     {
+51         return flightNumber;
+52     }
+.PP
+.fi
+
+.PP
+Referenced by \fBes\&.ull\&.flights\&.Flight\&.addPassenger()\fP, and \fBes\&.ull\&.passengers\&.Passenger\&.toString()\fP\&.
+.SS "int es\&.ull\&.flights\&.Flight\&.getNumberOfPassengers ()"
+
+.PP
+Obtiene el número de pasajeros actualmente en el vuelo\&. 
+.PP
+\fBReturns\fP
+.RS 4
+El número de pasajeros\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB59\fP of file \fBFlight\&.java\fP\&.
+.nf
+59                                        {
+60         return passengers\&.size();
+61     }
+.PP
+.fi
+
+.PP
+Referenced by \fBes\&.ull\&.flights\&.Flight\&.addPassenger()\fP\&.
+.SS "boolean es\&.ull\&.flights\&.Flight\&.removePassenger (\fBPassenger\fP passenger)"
+
+.PP
+Elimina un pasajero del vuelo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpassenger\fP Objeto Passenger que representa al pasajero a eliminar\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True si el pasajero fue eliminado exitosamente\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB84\fP of file \fBFlight\&.java\fP\&.
+.nf
+84                                                         {
+85         passenger\&.setFlight(null);
+86         return passengers\&.remove(passenger);
+87     }
+.PP
+.fi
+
+.PP
+References \fBes\&.ull\&.passengers\&.Passenger\&.setFlight()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Airport Java Project from the source code\&.

@@ -1,0 +1,5 @@
+<map id="es.ull.passengers.Passenger.toString" name="es.ull.passengers.Passenger.toString">
+<area shape="rect" id="Node000001" title="Representa el pasajero como una cadena de texto." alt="" coords="5,5,211,45"/>
+<area shape="rect" id="Node000002" href="$classes_1_1ull_1_1flights_1_1_flight.html#a54acb8002451233c0627f67d7da6cdff" title="Obtiene el número del vuelo." alt="" coords="259,5,408,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,23,243,23,243,28,211,28"/>
+</map>

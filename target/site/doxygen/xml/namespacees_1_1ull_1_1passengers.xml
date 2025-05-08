@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="namespacees_1_1ull_1_1passengers" kind="namespace" language="Java">
+    <compoundname>es::ull::passengers</compoundname>
+    <innerclass refid="classes_1_1ull_1_1passengers_1_1_passenger" prot="public">es::ull::passengers::Passenger</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/es/ull/passengers/Passenger.java" line="8" column="15"/>
+  </compounddef>
+</doxygen>
